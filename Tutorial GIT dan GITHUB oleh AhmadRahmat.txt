@@ -87,7 +87,7 @@ ketika saat git push success/done, lanjutkan ke langkah no 28.
 
 CARA CLONE GITHUB KE LOKAL
 1. buka repository github yg ingin di clone
-2. pada tombol "Clone or download", copy link Clone with HTTPS
+2. pada tombol "Code", copy link Clone with HTTPS
 3. masuk ke folder dimana repository tersebut akan ditempatkan, misalkan ke folder htdocs
 4. setelah dalam folder, klik kanan, git bash here
 5. masukan perintah:
