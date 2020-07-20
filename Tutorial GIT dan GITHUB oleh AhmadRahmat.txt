@@ -40,19 +40,3 @@ ketika saat git push success/done, lanjutkan ke langkah no 28.
 28. graph
 29. harusnya Head->master, origin/master berada di commit yang sama
 30. Happy coding !!
-
-
-CARA CLONE GITHUB KE LOKAL
-1. buka repository github yg ingin di clone
-2. pada tombol "Clone or download", copy link Clone with HTTPS
-3. masuk ke folder dimana repository tersebut akan ditempatkan, misalkan ke folder htdocs
-4. setelah dalam folder, klik kanan, git bash here
-5. masukan perintah:
-6. git clone (pastekan link https yang dicopy tadi)
-7. jadi seperti ini, git clone https:github.com/......dst.git
-8. akan muncul folder baru dengan nama yg sama dengan repo yg diclone
-9. masuk ke folder, cd nama-folder
-10. git status
-11. harusnya yg muncul Your branch is up to date with 'origin/master'
-12. graph
-13. HEAD->master, origin/master, origin/HEAD di commit yang sama
