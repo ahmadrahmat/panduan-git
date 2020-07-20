@@ -1,0 +1,58 @@
+*membuat perintah graph : alias graph="git log --all --decorate --oneline --graph"
+
+CARA BUAT GIT REMOTE DARI LOKAL KE GITHUB
+1. masuk ke folder, klik kanan, git bash here
+2. git init
+3. git add .
+4. git commit -m "commit pertama"
+5. graph
+6. buka github.com
+7. buat repo baru
+8. nama repo samakan dengan nama folder projek lokal
+9. jangan centang "Initialize this repository with a README"
+10. di CLI, masukkan : (perintah ini akan muncul setelah membuat repo di github)
+	git remote add origin https://github.com...... (*origin adalah nama default remotenya, bisa diganti)
+	git push -u origin master
+11. git status
+12. harusnya muncul "Your branch is up to date with origin/master"
+13. Untuk mengirimkan file lokal yang telah di ubah ke github, bisa dengan perintah
+14. git push
+
+ketika saat git push muncul [rejected], lanjutkan ke langkah no 15.
+ketika saat git push success/done, lanjutkan ke langkah no 28.
+
+15. ketika saat git push muncul [rejected] berarti ada konflik merge dari lokal dengan github, ini diakibatkan
+    projek github ada perubahan. Bisa saja orang lain atau teman se tim mengubah salah satu atau beberapa file
+    di projek github tanpa sepengetahuan kita. solusinya adalah :
+16. git fetch (untuk mengecek repo yang di github sudah sampai mana commitnya)
+17. git status (muncul 'Your branch and origin/master have diverged')
+18. graph (melihat commit). untuk mengatasi beda branch lokal dan remote:
+19. git pull (untuk ambil semua commit dari remote github)
+20. akan tampil di vs code beberapa file yang merge conflict
+21. Current Change ada code dilokal, Incoming Change adalah code yg berubah dari github
+22. Silahkan sesuaikan codenya, kemudian
+23. git status
+24. git add .
+25. git commit -m "Isi perubahan"
+26. git status
+27. git push
+
+28. graph
+29. harusnya Head->master, origin/master berada di commit yang sama
+30. Happy coding !!
+
+
+CARA CLONE GITHUB KE LOKAL
+1. buka repository github yg ingin di clone
+2. pada tombol "Clone or download", copy link Clone with HTTPS
+3. masuk ke folder dimana repository tersebut akan ditempatkan, misalkan ke folder htdocs
+4. setelah dalam folder, klik kanan, git bash here
+5. masukan perintah:
+6. git clone (pastekan link https yang dicopy tadi)
+7. jadi seperti ini, git clone https:github.com/......dst.git
+8. akan muncul folder baru dengan nama yg sama dengan repo yg diclone
+9. masuk ke folder, cd nama-folder
+10. git status
+11. harusnya yg muncul Your branch is up to date with 'origin/master'
+12. graph
+13. HEAD->master, origin/master, origin/HEAD di commit yang sama
